@@ -26,7 +26,7 @@
 - **make down / make stop**
 
 # PS
-## if the migrations has a correspoding seeder
+## if the migrations has a correspoding seeder [WINDOWS]
 - **winpty docker-compose exec app php artisan db:seed**
 
 ## for db error when running under linux / mac environment
