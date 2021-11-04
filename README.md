@@ -1,15 +1,15 @@
 # To Run The App
 
 ## for first time running
-**1. [cp .env.tempate .env]**
-**2. [cp backend/.env.example backend/.env]**
-**3. [cp .env.tempate .env]**
-**4. [docker-compose up --build -d]**
-**5. [winpty docker-compose exec app composer install]**
-**6. [winpty docker-compose exec app php artisan key:generate]**
-**7. [winpty docker-compose exec app php config:cache]**
-**8. [winpty docker-compose exec app chown www-data storage/ -R]**
-**9. [winpty docker-compose exec app php artisan migrate]**
+- **1. [cp .env.tempate .env]**
+- **2. [cp backend/.env.example backend/.env]**
+- **3. [cp .env.tempate .env]**
+- **4. [docker-compose up --build -d]**
+- **5. [winpty docker-compose exec app composer install]**
+- **6. [winpty docker-compose exec app php artisan key:generate]**
+- **7. [winpty docker-compose exec app php config:cache]**
+- **8. [winpty docker-compose exec app chown www-data storage/ -R]**
+- **9. [winpty docker-compose exec app php artisan migrate]**
 
 # for running the Nth time
 - **[docker-compose up -d]**
@@ -22,5 +22,5 @@
 - **[winpty docker-compose exec app php artisan db:seed]**
 
 ## for db error when running under linux / mac environment
--- **change infra/mysql/Docker**
+- *change infra/mysql/Docker*
 - **[FROM mysql:8.0] -> [FROM --platform=linux/x86_64 mysql:8.0]**
