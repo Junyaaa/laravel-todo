@@ -13,16 +13,16 @@
 ## for first time running [LINUX/MAC]
 - **1. [make init]**
 
-# for running the Nth time [WINDOWS]
+## for running the Nth time [WINDOWS]
 - **[docker-compose up -d]**
 
-# for running the Nth time [LINUX/MAC]
+## for running the Nth time [LINUX/MAC]
 - **[make up]**
 
-# for stopping [WINDOWS]
+## for stopping [WINDOWS]
 - **[docker-compose down / docker-compose stop]**
 
-# for stopping [LINUX/MAC]
+## for stopping [LINUX/MAC]
 - **[make down / make stop]**
 
 # PS
