@@ -11,24 +11,24 @@
 - **8. [winpty docker-compose exec app php artisan migrate]**
 
 ## for first time running [LINUX/MAC]
-- **1. [make init]**
+- **make init**
 
 ## for running the Nth time [WINDOWS]
-- **[docker-compose up -d]**
+- **docker-compose up -d**
 
 ## for running the Nth time [LINUX/MAC]
-- **[make up]**
+- **make up**
 
 ## for stopping [WINDOWS]
-- **[docker-compose down / docker-compose stop]**
+- **docker-compose down / docker-compose stop**
 
 ## for stopping [LINUX/MAC]
-- **[make down / make stop]**
+- **make down / make stop**
 
 # PS
 ## if the migrations has a correspoding seeder
-- **[winpty docker-compose exec app php artisan db:seed]**
+- **winpty docker-compose exec app php artisan db:seed**
 
 ## for db error when running under linux / mac environment
 *change infra/mysql/Dockerfile*
-- **[FROM mysql:8.0] -> [FROM --platform=linux/x86_64 mysql:8.0]**
+- **FROM mysql:8.0] -> [FROM --platform=linux/x86_64 mysql:8.0**
