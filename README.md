@@ -30,11 +30,11 @@
 - **winpty docker-compose exec app php artisan db:seed**
 
 ## for db error when running under linux / mac environment
-*change infra/mysql/Dockerfile*
-``
+- *change infra/mysql/Dockerfile*
+```
 FROM mysql:8.0
 
 COPY ./my.cnf /etc/mysql/conf.d/my.cnf
 RUN chmod 644 /etc/mysql/conf.d/my.cnf
 
-``
+```
