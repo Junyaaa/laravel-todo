@@ -1,6 +1,6 @@
 # To Run The App
 
-## for first time running
+## for first time running [WINDOWS]
 - **1. [cp .env.tempate .env]**
 - **2. [cp backend/.env.example backend/.env]**
 - **3. [docker-compose up --build -d]**
@@ -10,11 +10,20 @@
 - **7. [winpty docker-compose exec app chown www-data storage/ -R]**
 - **8. [winpty docker-compose exec app php artisan migrate]**
 
-# for running the Nth time
+## for first time running [LINUX/MAC]
+- **1. [make init]**
+
+# for running the Nth time [WINDOWS]
 - **[docker-compose up -d]**
 
-# for stopping
+# for running the Nth time [LINUX/MAC]
+- **[make up]**
+
+# for stopping [WINDOWS]
 - **[docker-compose down / docker-compose stop]**
+
+# for stopping [LINUX/MAC]
+- **[make down / make stop]**
 
 # PS
 ## if the migrations has a correspoding seeder

@@ -11,6 +11,7 @@ init:
 	docker-compose exec app composer install
 	docker-compose exec app php artisan key:generate
 	docker-compose exec app php artisan migrate:fresh
+	docker-compose exec app chown www-data storage/ -R
 remake:
 	@make stop
 	@make destroy
