@@ -30,5 +30,5 @@
 - **[winpty docker-compose exec app php artisan db:seed]**
 
 ## for db error when running under linux / mac environment
-*change infra/mysql/Docker*
+*change infra/mysql/Dockerfile*
 - **[FROM mysql:8.0] -> [FROM --platform=linux/x86_64 mysql:8.0]**
