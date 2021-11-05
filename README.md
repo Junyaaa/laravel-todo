@@ -38,3 +38,9 @@ COPY ./my.cnf /etc/mysql/conf.d/my.cnf
 RUN chmod 644 /etc/mysql/conf.d/my.cnf
 
 ```
+
+## to access the app
+```
+web - http://localhost
+phpmyadmin - http://localhost:8888
+```
