@@ -6,7 +6,7 @@
 - **3. [docker-compose up --build -d]**
 - **4. [winpty docker-compose exec app composer install]**
 - **5. [winpty docker-compose exec app php artisan key:generate]**
-- **6. [winpty docker-compose exec app php config:cache]**
+- **6. [winpty docker-compose exec app php artisan config:cache]**
 - **7. [winpty docker-compose exec app chown www-data storage/ -R]**
 - **8. [winpty docker-compose exec app php artisan migrate]**
 
