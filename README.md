@@ -1,7 +1,7 @@
 # To Run The App
 
 ## for first time running [WINDOWS]
-- **1. [cp .env.tempate .env]**
+- **1. [cp .env.template .env]**
 - **2. [cp backend/.env.example backend/.env]**
 - **3. [docker-compose up --build -d]**
 - **4. [winpty docker-compose exec app composer install]**
