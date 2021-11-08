@@ -8,54 +8,54 @@
 
 #### for first time running [WINDOWS]
 ```
-- **1. [cp .env.template .env]**
-- **2. [cp backend/.env.example backend/.env]**
-- **3. [docker-compose up --build -d]**
-- **4. [winpty docker-compose exec app composer install]**
-- **5. [winpty docker-compose exec app php artisan key:generate]**
-- **6. [winpty docker-compose exec app php artisan config:cache]**
-- **7. [winpty docker-compose exec app chown www-data storage/ -R]**
-- **8. [winpty docker-compose exec app php artisan migrate]**
+1. [cp .env.template .env]
+2. [cp backend/.env.example backend/.env]
+3. [docker-compose up --build -d]
+4. [winpty docker-compose exec app composer install]
+5. [winpty docker-compose exec app php artisan key:generate]
+6. [winpty docker-compose exec app php artisan config:cache]
+7. [winpty docker-compose exec app chown www-data storage/ -R]
+8. [winpty docker-compose exec app php artisan migrate]
 ```
 
 #### for first time running [LINUX/MAC]
 ```
-- **make init**
+make init
 ```
 
 #### for running the Nth time [WINDOWS]
 ```
-- **docker-compose up -d**
+docker-compose up -d
 ```
 
 #### for running the Nth time [LINUX/MAC]
 ```
-- **make up**
+make up
 ```
 
 #### for stopping [WINDOWS]
 ```
-- **docker-compose stop**
+docker-compose stop
 ```
 #### for removing container [WINDOWS]
 ```
-- **docker-compose down**
+docker-compose down
 ```
 
 #### for stopping [LINUX/MAC]
 ```
-- **make stop**
+make stop
 ```
 
 #### for removing containers [LINUX/MAC]
 ```
-- **make down**
+make down
 ```
 
 ### FYI
 #### if the migrations has a correspoding seeder [WINDOWS]
 ```
-- **winpty docker-compose exec app php artisan db:seed**
+winpty docker-compose exec app php artisan db:seed
 ```
 
 
