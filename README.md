@@ -8,14 +8,14 @@
 
 #### for first time running [WINDOWS]
 ```
-1. [cp .env.template .env]
-2. [cp backend/.env.example backend/.env]
-3. [docker-compose up --build -d]
-4. [winpty docker-compose exec app composer install]
-5. [winpty docker-compose exec app php artisan key:generate]
-6. [winpty docker-compose exec app php artisan config:cache]
-7. [winpty docker-compose exec app chown www-data storage/ -R]
-8. [winpty docker-compose exec app php artisan migrate]
+1. cp .env.template .env
+2. cp backend/.env.example backend/.env
+3. docker-compose up --build -d
+4. winpty docker-compose exec app composer install
+5. winpty docker-compose exec app php artisan key:generate
+6. winpty docker-compose exec app php artisan config:cache
+7. winpty docker-compose exec app chown www-data storage/ -R
+8. winpty docker-compose exec app php artisan migrate
 ```
 
 #### for first time running [LINUX/MAC]
