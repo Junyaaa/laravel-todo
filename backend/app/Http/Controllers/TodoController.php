@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Log;
 
 class TodoController extends Controller
 {
-    private $todo; 
+    private $todo;
 
     /**
      * Todo constructor.
-     * 
-     * @param App\Models\Todo $todo 
-     * 
+     *
+     * @param App\Models\Todo $todo
+     *
      **/
     public function __construct(Todo $todo)
     {
@@ -86,7 +86,7 @@ class TodoController extends Controller
         $todo->save();
 
         return redirect()->route('index');
-        
+
     }
 
     /**
