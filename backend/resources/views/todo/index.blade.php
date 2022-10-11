@@ -5,20 +5,65 @@
 @section('content')
 
 <div class="container">
-    <div class="card-deck">
-        <div class="card">
-            <div class="card-header">
-                <h4>フォルダ</h4>
+    {{-- <div class="card-deck"> --}}
+        <div class="row">
+            <div class="col col-md-4">
+              <nav class="panel panel-default">
+                <div class="panel-heading">フォルダ</div>
+                <div class="panel-body">
+                  <a href="{{ route('folders.create') }}" class="btn btn-default btn-block">
+                    フォルダを追加する
+                  </a>
+                </div>
+                <div class="list-group">
+                  @foreach($folders as $folder)
+                    <a
+                    href="{{ route('todos.index', ['id' => $folder->id]) }}"
+                    class="list-group-item {{ $folder_id === $folder->id ? 'active' : '' }}">
+                    </a>
+                  @endforeach
+                </div>
+              </nav>
             </div>
-            <div class="card-body">
-                <p>123</p>
-                <p>123</p>
-                <p>123</p>
-                <p>123</p>
+            <div class="column col-md-8">
+              <!-- ここにタスクが表示される -->
+              <div class="panel panel-default">
+                <div class="panel-heading">タスク</div>
+                <div class="panel-body">
+                  <div class="text-right">
+                    <a href="#" class="btn btn-default btn-block">
+                      タスクを追加する
+                    </a>
+                  </div>
+                </div>
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th>タイトル</th>
+                    <th>状態</th>
+                    <th>期限</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($tasks as $task)
+                      <tr>
+                        <td>{{ $task->title }}</td>
+                        <td>
+                          <span class="label {{ $task->status_class }}">{{ $task->status_label }}</span>
+                        </td>
+                        <td>{{ $task->formatted_due_date }}</td>
+                        <td><a href="#">編集</a></td>
+                      </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </div>
 
-        </div>
-        <div class="card">
+
+        {{-- <div class="card m-3 w-75">
             <div class="card-header">
                 <h4>タスク</h4>
             </div>
@@ -27,7 +72,7 @@
                     @csrf
 
                     <div class="col-10">
-                        <input type="text" class="form-control" placeholder="Create a task" value="{{ old('task') }}" name="task" style="width: 108%"/>
+                        <input type="text" class="form-control" placeholder="タスクを作成する" value="{{ old('task') }}" name="task" style="width: 108%"/>
                     </div>
 
                     <div class="col-2 ps-5">
@@ -63,7 +108,7 @@
                 @endif
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 
 @endsection

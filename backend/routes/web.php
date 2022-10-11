@@ -15,19 +15,27 @@ use App\Http\Controllers\TodoController;
 |
 */
 
-Route::get('/', [TodoController::class, 'index'])->name('index');
+// Route::get('/', [TodoController::class, 'index'])->name('index');
 
 Route::get('/login', function () {
     return view('auth.login');
 });
 
-Route::get('/{id}/edit', [TodoController::class, 'edit'])->name('edit');
+// フォルダ一覧ページ
 
-Route::post('/store', [TodoController::class, 'store'])->name('store');
+// Route::get('/folders/{id}/todos', [TodoController::class, 'index'])->name('todos.index');
+Route::get('/', [TodoController::class, 'index'])->name('todos.index');
 
-Route::patch('/{id}/update', [TodoController::class, 'update'])->name('update');
+Route::get('/folders/create', 'App\Http\Controllers\FolderController@showCreateForm')->name('folders.create');
+Route::post('/folders/create', 'App\Http\Controllers\FolderController@create');
 
-Route::delete('/{id}/destroy', [TodoController::class, 'destroy'])->name('destroy');
+// Route::get('/{id}/edit', [TodoController::class, 'edit'])->name('edit');
+
+// Route::post('/store', [TodoController::class, 'store'])->name('store');
+
+// Route::patch('/{id}/update', [TodoController::class, 'update'])->name('update');
+
+// Route::delete('/{id}/destroy', [TodoController::class, 'destroy'])->name('destroy');
 
 Auth::routes();
 

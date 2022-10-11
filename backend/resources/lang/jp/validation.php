@@ -120,7 +120,11 @@ return [
     ],
     'starts_with' => 'The :attribute must start with one of the following: :values.',
     // 'string' => 'The :attribute must be a string.',
-    'string'  => ':attribute は :max 文字以内で入力してください。',
+    'max'                  => [
+        // 中略
+        'string'  => ':attribute は :max 文字以内で入力してください。',
+        // 中略
+    ],
     'timezone' => 'The :attribute must be a valid timezone.',
     'unique' => 'The :attribute has already been taken.',
     'uploaded' => 'The :attribute failed to upload.',
